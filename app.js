@@ -3,9 +3,7 @@ const app=express();
 const connecttomongo=require('./db');
 const cors=require('cors')
 const errorMiddleware = require('./middlewares/error.js')
-app.use(cors({
-  origin : 'http://localhost:3000',  
-}))
+app.use(cors())
 connecttomongo();
 app.use(express.json());
 app.use('/api',require('./routes/user'));
