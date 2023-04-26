@@ -4,7 +4,7 @@ const connecttomongo=require('./db');
 const cors=require('cors')
 const errorMiddleware = require('./middlewares/error.js')
 app.use(cors({
-  origin : 'https://manasu.wisemonk.xyz/',  
+  origin : 'https://manasu.wisemonk.xyz',  
 }))
 connecttomongo();
 app.use(express.json());
