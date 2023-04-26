@@ -3,7 +3,9 @@ const app=express();
 const connecttomongo=require('./db');
 const cors=require('cors')
 const errorMiddleware = require('./middlewares/error.js')
-app.use(cors())
+app.use(cors({
+  origin : 'https://manasu.wisemonk.xyz/',  
+}))
 connecttomongo();
 app.use(express.json());
 app.use('/api',require('./routes/user'));
